@@ -6,19 +6,10 @@
     <description>Recent content in Posts on Kong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Dec 2019 21:40:35 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 18 May 2019 07:13:00 +0000</lastBuildDate>
     
 	<atom:link href="https://0vo.moe/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Test</title>
-      <link>https://0vo.moe/posts/test/</link>
-      <pubDate>Wed, 18 Dec 2019 21:40:35 +0800</pubDate>
-      
-      <guid>https://0vo.moe/posts/test/</guid>
-      <description>test </description>
-    </item>
     
     <item>
       <title>编译安装 shadowsocks-libev 记录</title>
