@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Kong&#39;s Blog</title>
+    <link>https://0vo.moe/categories/</link>
+    <description>Recent content in Categories on Kong&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 18 May 2019 07:13:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://0vo.moe/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux</title>
+      <link>https://0vo.moe/categories/linux/</link>
+      <pubDate>Sat, 18 May 2019 07:13:00 +0000</pubDate>
+      
+      <guid>https://0vo.moe/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macOS</title>
+      <link>https://0vo.moe/categories/macos/</link>
+      <pubDate>Sun, 31 Mar 2019 14:26:00 +0000</pubDate>
+      
+      <guid>https://0vo.moe/categories/macos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://0vo.moe/categories/python/</link>
+      <pubDate>Sun, 10 Mar 2019 03:27:00 +0000</pubDate>
+      
+      <guid>https://0vo.moe/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>https://0vo.moe/categories/golang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://0vo.moe/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shadowsocks on Kong&#39;s Blog</title>
+    <link>https://0vo.moe/tags/shadowsocks/</link>
+    <description>Recent content in shadowsocks on Kong&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 18 May 2019 07:13:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://0vo.moe/tags/shadowsocks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>编译安装 shadowsocks-libev 记录</title>
+      <link>https://0vo.moe/posts/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85-shadowsocks-libev-%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sat, 18 May 2019 07:13:00 +0000</pubDate>
+      
+      <guid>https://0vo.moe/posts/%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85-shadowsocks-libev-%E8%AE%B0%E5%BD%95/</guid>
+      <description>由于秋水逸冰大佬已经金盆洗手，不干了，所以也就没有脚本可以用了，所以打算自己编译安装一个，在这儿做个记录，以备以后查阅 项目地址：https:</description>
+    </item>
+    
+    <item>
+      <title>V2ray搭建Nginx&#43;TLS&#43;Webocket代理方案</title>
+      <link>https://0vo.moe/posts/v2ray%E6%90%AD%E5%BB%BAnginx&#43;tls&#43;webocket%E4%BB%A3%E7%90%86%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Thu, 24 Jan 2019 20:07:00 +0000</pubDate>
+      
+      <guid>https://0vo.moe/posts/v2ray%E6%90%AD%E5%BB%BAnginx&#43;tls&#43;webocket%E4%BB%A3%E7%90%86%E6%96%B9%E6%A1%88/</guid>
+      <description>这应该是目前理论最隐蔽的代理方式，走的是真正意义上的https流量，是实际的网站流量，当然前提是你有一个网站，不过没有也没关系，只不过比较假</description>
+    </item>
+    
+    <item>
+      <title>在Linux上使用ss客户端并设置代理</title>
+      <link>https://0vo.moe/posts/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8ss%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B9%B6%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Sat, 24 Nov 2018 11:19:00 +0000</pubDate>
+      
+      <guid>https://0vo.moe/posts/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8ss%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B9%B6%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/</guid>
+      <description>最近在国内阿里云上git clone让我感受到了国内网络到github的糟糕程度，实在是慢的想砸电脑，于是就想着设置一个代理，shadowso</description>
+    </item>
+    
+  </channel>
+</rss>

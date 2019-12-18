@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>用Python进行网易云和qq音乐歌单对比 :: Kong&#39;s Blog</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="由于网易云音乐版权越来越少，歌单里的歌一首首的灰掉，于是就想着换到qq音乐。但是用qq音乐导入网易云的歌单后还是有一部分歌没有匹配到，而qq"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94/" />
+
+
+
+
+
+<link rel="stylesheet" href="https://0vo.moe/assets/style.css">
+
+
+<link rel="stylesheet" href="https://0vo.moe/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://0vo.moe/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://0vo.moe/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="用Python进行网易云和qq音乐歌单对比"/>
+<meta name="twitter:description" content="由于网易云音乐版权越来越少，歌单里的歌一首首的灰掉，于是就想着换到qq音乐。但是用qq音乐导入网易云的歌单后还是有一部分歌没有匹配到，而qq"/>
+
+
+
+<meta property="og:title" content="用Python进行网易云和qq音乐歌单对比" />
+<meta property="og:description" content="由于网易云音乐版权越来越少，歌单里的歌一首首的灰掉，于是就想着换到qq音乐。但是用qq音乐导入网易云的歌单后还是有一部分歌没有匹配到，而qq" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94/" />
+
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Kong&#39;s Blog</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/archive">Archive</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/archive">Archive</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  <div class="post">
+    <h2 class="post-title"><a href="https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94/">用Python进行网易云和qq音乐歌单对比</a></h2>
+    <div class="post-meta">
+      
+      
+      
+        <span class="post-read-time">— 2 min read</span>
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://0vo.moe/tags/python/">Python</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p>由于网易云音乐版权越来越少，歌单里的歌一首首的灰掉，于是就想着换到qq音乐。但是用qq音乐导入网易云的歌单后还是有一部分歌没有匹配到，而qq音乐也没告诉你哪些没匹配到，人工一个个筛选实在不现实，所以就想用代码来解决这个问题。</p>
+<p>初步打算根据歌曲名来筛选，首先就要获取到这两家的歌单数据</p>
+<h2 id="qq">qq音乐</h2>
+<p>首先登录到qq音乐的网页版，进入歌单页面，F12大法</p>
+<p><img src="/images/2019/11/4113408332.png" alt="image-20191110145947495"></p>
+<p>可以看到歌曲信息是放在这样一个结构里的，然后查看网页源码却找不到这些内容，由此可见这些数据是动态加载的，要获取它们只能找到相应的接口，然后我找到了这个</p>
+<p><img src="/images/2019/11/725160611.png" alt="image-20191110150232596"></p>
+<p>应该是歌单的数据接口，换用postman请求</p>
+<p><img src="/images/2019/11/2455323748.png" alt="image-20191110150501484"></p>
+<p>果然是歌单数据，<code>songlist</code>这个数组里应该就是所有的歌曲了，注意GET请求参数中的<code>song_num</code>参数，这个是返回的歌曲数量，把他改为歌单里歌曲总数就可以拿到所有歌曲信息了</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">header <span style="color:#f92672">=</span> {
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Referer</span><span style="color:#e6db74">&#39;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">https://y.qq.com/</span><span style="color:#e6db74">&#39;</span>,
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Accept</span><span style="color:#e6db74">&#39;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">*/*</span><span style="color:#e6db74">&#39;</span>,
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Accept-Language</span><span style="color:#e6db74">&#39;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">en-US,en;q=0.8</span><span style="color:#e6db74">&#39;</span>,
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Cache-Control</span><span style="color:#e6db74">&#39;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">max-age=0</span><span style="color:#e6db74">&#39;</span>,
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">User-Agent</span><span style="color:#e6db74">&#39;</span>:
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36</span><span style="color:#e6db74">&#39;</span>,
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Connection</span><span style="color:#e6db74">&#39;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">keep-alive</span><span style="color:#e6db74">&#39;</span>
+}
+
+req <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg?type=1&amp;json=1&amp;utf8=1&amp;onlysong=0&amp;new_format=1&amp;disstid=774328000&amp;g_tk=5381&amp;loginUin=1271703270&amp;hostUin=0&amp;format=json&amp;inCharset=utf8&amp;outCharset=utf-8&amp;notice=0&amp;platform=yqq.json&amp;needNewCode=0&amp;song_begin=0&amp;song_num=446</span><span style="color:#e6db74">&#39;</span>,
+    headers<span style="color:#f92672">=</span>header)
+</code></pre></div><p>由于拿到的数据是json，很容易处理</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">obj <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(req<span style="color:#f92672">.</span>text)
+
+qqList <span style="color:#f92672">=</span> []
+
+<span style="color:#66d9ef">for</span> song <span style="color:#f92672">in</span> obj[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">cdlist</span><span style="color:#e6db74">&#39;</span>][<span style="color:#ae81ff">0</span>][<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">songlist</span><span style="color:#e6db74">&#39;</span>]:
+    qqList<span style="color:#f92672">.</span>append(
+        re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">(</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">(.*?</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">))|(</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">（.*?</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">）)|(</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">[.*?</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">])</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#39;</span>, song[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">title</span><span style="color:#e6db74">&#39;</span>])
+</code></pre></div><p>这里我用正则匹配去掉了所有的括号内容，提高之后筛选的精确度，所有歌曲的名称都存到了<code>qqList</code>这个列表里</p>
+<h2 id="heading">网易云音乐</h2>
+<p>和qq音乐一样是动态加载，接口地址<code>https://music.163.com/playlist?id=66699402</code>，<code>id</code>是歌单的id</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">header <span style="color:#f92672">=</span> {
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Referer</span><span style="color:#e6db74">&#39;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">https://music.163.com/</span><span style="color:#e6db74">&#39;</span>,
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Accept</span><span style="color:#e6db74">&#39;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">*/*</span><span style="color:#e6db74">&#39;</span>,
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Accept-Language</span><span style="color:#e6db74">&#39;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">en-US,en;q=0.8</span><span style="color:#e6db74">&#39;</span>,
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Cache-Control</span><span style="color:#e6db74">&#39;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">max-age=0</span><span style="color:#e6db74">&#39;</span>,
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">User-Agent</span><span style="color:#e6db74">&#39;</span>:
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36</span><span style="color:#e6db74">&#39;</span>,
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Connection</span><span style="color:#e6db74">&#39;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">keep-alive</span><span style="color:#e6db74">&#39;</span>
+}
+
+req <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">https://music.163.com/playlist?id=66699402</span><span style="color:#e6db74">&#39;</span>,
+                   headers<span style="color:#f92672">=</span>header)
+</code></pre></div><p>由于返回数据是html文档，所以用<code>Beautifulsoup</code>库来处理</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">soup <span style="color:#f92672">=</span> BeautifulSoup(req<span style="color:#f92672">.</span>text, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">html.parser</span><span style="color:#e6db74">&#39;</span>)
+tag <span style="color:#f92672">=</span> soup<span style="color:#f92672">.</span>find(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">ul</span><span style="color:#e6db74">&#34;</span>, attrs<span style="color:#f92672">=</span>{<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">class</span><span style="color:#e6db74">&#39;</span>: [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">f-hide</span><span style="color:#e6db74">&#39;</span>]})
+neteaseList <span style="color:#f92672">=</span> []
+<span style="color:#66d9ef">for</span> song <span style="color:#f92672">in</span> tag<span style="color:#f92672">.</span>children:
+    neteaseList<span style="color:#f92672">.</span>append(
+        re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">(</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">(.*?</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">))|(</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">（.*?</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">）)|(</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">[.*?</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">])</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#39;</span>,
+               song<span style="color:#f92672">.</span>contents[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>text))
+</code></pre></div><p>同样将歌曲名处理括号后保存在<code>neteaseList</code>列表里</p>
+<h2 id="heading-1">数据分析</h2>
+<p>为了对比两个歌单，我打算用<code>difflib</code>库来对比歌曲名的相似程度</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">songList <span style="color:#f92672">=</span> set()
+<span style="color:#66d9ef">for</span> s1 <span style="color:#f92672">in</span> neteaseList:
+    <span style="color:#66d9ef">for</span> s2 <span style="color:#f92672">in</span> qqList:
+        t <span style="color:#f92672">=</span> difflib<span style="color:#f92672">.</span>SequenceMatcher(None, s1, s2)<span style="color:#f92672">.</span>ratio()
+        <span style="color:#66d9ef">if</span> t <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">0.6</span>:
+            songList<span style="color:#f92672">.</span>add(s1)
+results <span style="color:#f92672">=</span> set(neteaseList)<span style="color:#f92672">.</span>difference(songList)
+</code></pre></div><p>将结果写入文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">list.txt</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">w</span><span style="color:#e6db74">&#39;</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">utf-8</span><span style="color:#e6db74">&#39;</span>) <span style="color:#66d9ef">as</span> f:
+    <span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> results:
+        f<span style="color:#f92672">.</span>writelines(s <span style="color:#f92672">+</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+</code></pre></div><p>这样进行匹配精度不会太高，不过也勉强够用，可以适当调整<code>t</code>的值让输出的结果与丢失的歌曲数量差不多，这样就可以去手动搜索补全丢失的歌曲了，虽然也挺花时间，但是总比之前好多了</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="https://0vo.moe/posts/%E5%85%B3%E4%BA%8Egolang%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E9%87%8D%E5%A4%8D%E6%95%B0%E5%AD%97/">
+                <span class="button__icon">←</span>
+                <span class="button__text">关于Golang随机数生成重复数字</span>
+              </a>
+            </span>
+          
+          
+        </div>
+      </div>
+    
+
+    <div id="gitalk-container"></div>
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Kong&#39;s Blog</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://0vo.moe/assets/main.js"></script>
+<script src="https://0vo.moe/assets/prism.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '1c3fc906398de5399778',
+        clientSecret: '7e581e3705aa910a791159cf11a7693f5a4f7bc4',
+        repo: 'kzw200015.github.io',
+        owner: 'kzw200015',
+        admin: ['kzw200015'],
+        id: location.pathname,
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+
+      
+    </div>
+
+    
+  </body>
+</html>
