@@ -6,7 +6,7 @@
     <description>Recent content in Python on Kong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://0vo.moe/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>用Python进行网易云和qq音乐歌单对比</title>
       <link>https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94/</link>
-      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94/</guid>
       <description>由于网易云音乐版权越来越少，歌单里的歌一首首的灰掉，于是就想着换到qq音乐。但是用qq音乐导入网易云的歌单后还是有一部分歌没有匹配到，而qq</description>
