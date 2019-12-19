@@ -3,22 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://0vo.moe/</loc>
+    <lastmod>2019-12-19T20:31:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://0vo.moe/posts/</loc>
+    <lastmod>2019-12-19T20:31:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://0vo.moe/posts/test/</loc>
+    <lastmod>2019-12-19T20:31:47+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://0vo.moe/about/</loc>
     <lastmod>2019-12-18T20:26:04+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://0vo.moe/</loc>
-    <lastmod>2019-12-18T20:26:04+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://0vo.moe/categories/</loc>
-    <lastmod>2019-12-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://0vo.moe/posts/</loc>
     <lastmod>2019-12-09T00:00:00+00:00</lastmod>
   </url>
   
