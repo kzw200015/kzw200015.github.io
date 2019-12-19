@@ -13,4 +13,5 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_ecdsa
           sudo chmod -R 0600 ~/.ssh
+          cat ~/.ssh/id_ecdsa
           ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@0vo.moe "cd /root/myservice-docker/www/hugo && git pull"
