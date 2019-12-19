@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: Pull the static file
         run: |
-          # mkdir -p ~/.ssh
-          # echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_ecdsa
-          # chmod -R 0600 ~/.ssh
-          ssh -i "${{ secrets.SSH_KEY }}" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@0vo.moe "cd /root/myservice-docker/www/hugo && git pull"
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_ecdsa
+          sudo chmod -R 0600 ~/.ssh
+          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@0vo.moe "cd /root/myservice-docker/www/hugo && git pull"
