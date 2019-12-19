@@ -13,4 +13,6 @@ jobs:
           mkdir -p ~/.ssh
           echo '${{ secrets.SSH_PRIVATE_KEY }}' > ~/.ssh/id_ecdsa
           chmod 600 ~/.ssh/id_ecdsa
-          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@0vo.moe 'cd /root/myservice-docker/www/hugo && git pull && setwww'
+          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@0vo.moe 'cd /root/myservice-docker/www/hugo \
+          && git pull && \
+          chmod 755 -R /root/myservice-docker/www && chown 101:101 -R /root/myservice-docker/www'
