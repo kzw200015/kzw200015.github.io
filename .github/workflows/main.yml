@@ -4,15 +4,12 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Pull the static file
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_ecdsa
-        ssh root@0vo.moe
-        cd /root/myservice-docker/www/hugo
-        git pull
+      - uses: actions/checkout@v1
+      - name: Pull the static file
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_ecdsa
+          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@0vo.moe "cd /root/myservice-docker/www/hugo && git pull"
