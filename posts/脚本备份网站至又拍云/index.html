@@ -215,6 +215,21 @@ LC_ALL='en_US.UTF-8'
     
 
     <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://0vo.moe/assets/md5.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: 'fa783045e1ed26ae6bf4',
+        clientSecret: 'd425efee09272bdd21175c324bb8691d04ed0a87',
+        repo: 'kzw200015.github.io',
+        owner: 'kzw200015',
+        admin: ['kzw200015'],
+        id: md5(location.pathname),
+    })
+
+    gitalk.render('gitalk-container')
+</script>
     </div>
 
       </div>
@@ -243,21 +258,7 @@ LC_ALL='en_US.UTF-8'
 </footer>
 
 <script src="https://0vo.moe/assets/main.js"></script>
-<script src="https://0vo.moe/assets/prism.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://0vo.moe/assets/md5.min.js"></script>
-<script>
-    const gitalk = new Gitalk({
-        clientID: 'fa783045e1ed26ae6bf4',
-        clientSecret: 'd425efee09272bdd21175c324bb8691d04ed0a87',
-        repo: 'kzw200015.github.io',
-        owner: 'kzw200015',
-        admin: ['kzw200015'],
-        id: md5(location.pathname),
-    })
-
-    gitalk.render('gitalk-container')
-</script>
+<script src="https://0vo.moe/assets/prism.js"></script>
 
       
     </div>
