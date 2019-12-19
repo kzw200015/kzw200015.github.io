@@ -14,7 +14,47 @@
   
   <url>
     <loc>https://0vo.moe/categories/</loc>
-    <lastmod>2019-05-18T07:13:00+00:00</lastmod>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://0vo.moe/categories/golang/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://0vo.moe/tags/golang/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://0vo.moe/posts/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://0vo.moe/tags/python/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://0vo.moe/categories/python/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://0vo.moe/tags/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://0vo.moe/posts/%E5%85%B3%E4%BA%8Egolang%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E9%87%8D%E5%A4%8D%E6%95%B0%E5%AD%97/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -28,17 +68,7 @@
   </url>
   
   <url>
-    <loc>https://0vo.moe/posts/</loc>
-    <lastmod>2019-05-18T07:13:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://0vo.moe/tags/shadowsocks/</loc>
-    <lastmod>2019-05-18T07:13:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://0vo.moe/tags/</loc>
     <lastmod>2019-05-18T07:13:00+00:00</lastmod>
   </url>
   
@@ -74,16 +104,6 @@
   
   <url>
     <loc>https://0vo.moe/posts/hexo%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2019-03-10T03:27:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://0vo.moe/categories/python/</loc>
-    <lastmod>2019-03-10T03:27:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://0vo.moe/tags/python/</loc>
     <lastmod>2019-03-10T03:27:00+00:00</lastmod>
   </url>
   
@@ -159,22 +179,6 @@
   
   <url>
     <loc>https://0vo.moe/archive/</loc>
-  </url>
-  
-  <url>
-    <loc>https://0vo.moe/categories/golang/</loc>
-  </url>
-  
-  <url>
-    <loc>https://0vo.moe/tags/golang/</loc>
-  </url>
-  
-  <url>
-    <loc>https://0vo.moe/posts/%E5%85%B3%E4%BA%8Egolang%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E9%87%8D%E5%A4%8D%E6%95%B0%E5%AD%97/</loc>
-  </url>
-  
-  <url>
-    <loc>https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94/</loc>
   </url>
   
 </urlset>

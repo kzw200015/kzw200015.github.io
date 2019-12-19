@@ -6,10 +6,19 @@
     <description>Recent content in Python on Kong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 10 Mar 2019 03:27:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://0vo.moe/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>用Python进行网易云和qq音乐歌单对比</title>
+      <link>https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94/</guid>
+      <description>由于网易云音乐版权越来越少，歌单里的歌一首首的灰掉，于是就想着换到qq音乐。但是用qq音乐导入网易云的歌单后还是有一部分歌没有匹配到，而qq</description>
+    </item>
     
     <item>
       <title>[脚本]备份网站至又拍云</title>
@@ -36,15 +45,6 @@
       
       <guid>https://0vo.moe/posts/%E5%9C%A8vs2019%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEarcobjectarcengine%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
       <description>由于学习需要，要安装低版本的ArcEngine，可是低版本并不支持VS2019，所以需要用一些技巧骗过安装程序，在这记录一下安装过程 需要用到</description>
-    </item>
-    
-    <item>
-      <title>用Python进行网易云和qq音乐歌单对比</title>
-      <link>https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94/</guid>
-      <description>由于网易云音乐版权越来越少，歌单里的歌一首首的灰掉，于是就想着换到qq音乐。但是用qq音乐导入网易云的歌单后还是有一部分歌没有匹配到，而qq</description>
     </item>
     
   </channel>

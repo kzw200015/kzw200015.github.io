@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Kong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 18 May 2019 07:13:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://0vo.moe/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Golang</title>
+      <link>https://0vo.moe/categories/golang/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://0vo.moe/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://0vo.moe/categories/python/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://0vo.moe/categories/python/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Linux</title>
@@ -26,24 +44,6 @@
       <pubDate>Sun, 31 Mar 2019 14:26:00 +0000</pubDate>
       
       <guid>https://0vo.moe/categories/macos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://0vo.moe/categories/python/</link>
-      <pubDate>Sun, 10 Mar 2019 03:27:00 +0000</pubDate>
-      
-      <guid>https://0vo.moe/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Golang</title>
-      <link>https://0vo.moe/categories/golang/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://0vo.moe/categories/golang/</guid>
       <description></description>
     </item>
     
