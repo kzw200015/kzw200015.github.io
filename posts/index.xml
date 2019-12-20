@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Kong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Dec 2019 22:58:19 +0800</lastBuildDate>
     
 	<atom:link href="https://0vo.moe/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Test</title>
+      <link>https://0vo.moe/posts/test/</link>
+      <pubDate>Fri, 20 Dec 2019 22:58:19 +0800</pubDate>
+      
+      <guid>https://0vo.moe/posts/test/</guid>
+      <description>test</description>
+    </item>
     
     <item>
       <title>用Python进行网易云和qq音乐歌单对比</title>
