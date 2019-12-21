@@ -162,7 +162,7 @@ ARG version
 
 WORKDIR /root/
 
-RUN apk add --no-cache build-base git pcre-dev openssl-dev zlib-dev \
+RUN apk update &amp;&amp; apk add --no-cache build-base git pcre-dev openssl-dev zlib-dev \
     &amp;&amp; wget http://nginx.org/download/nginx-${version}.tar.gz \
     &amp;&amp; tar zxf nginx-${version}.tar.gz \
     &amp;&amp; git clone https://github.com/google/ngx_brotli.git \
