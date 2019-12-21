@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Kong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Dec 2019 17:25:19 +0800</lastBuildDate>
     
 	<atom:link href="https://0vo.moe/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>为Docker中的Nginx启用Brotli压缩算法</title>
+      <link>https://0vo.moe/posts/%E4%B8%BAdocker%E4%B8%AD%E7%9A%84nginx%E5%90%AF%E7%94%A8brotli%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sat, 21 Dec 2019 17:25:19 +0800</pubDate>
+      
+      <guid>https://0vo.moe/posts/%E4%B8%BAdocker%E4%B8%AD%E7%9A%84nginx%E5%90%AF%E7%94%A8brotli%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/</guid>
+      <description>由于Brotli属于第三方模块，Nginx的官方Docker镜像并没有集成，所以只能自己添加，好在Nginx可以动态加载模块，无需编译整个N</description>
+    </item>
     
     <item>
       <title>用Python进行网易云和qq音乐歌单对比</title>
