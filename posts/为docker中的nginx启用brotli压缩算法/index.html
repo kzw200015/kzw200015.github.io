@@ -154,86 +154,86 @@
     <div class="post-content">
       <p>由于<code>Brotli</code>属于第三方模块，<code>Nginx</code>的官方<code>Docker</code>镜像并没有集成，所以只能自己添加，好在<code>Nginx</code>可以动态加载模块，无需编译整个<code>Nginx</code></p>
 <p>直接上Dockerfile吧</p>
-<pre><code>ARG version=1.17.6
-
-FROM nginx:${version}-alpine AS builder
-
-ARG version
-
-WORKDIR /root/
-
-RUN apk update &amp;&amp; apk add --no-cache build-base git pcre-dev openssl-dev zlib-dev \
-    &amp;&amp; wget http://nginx.org/download/nginx-${version}.tar.gz \
-    &amp;&amp; tar zxf nginx-${version}.tar.gz \
-    &amp;&amp; git clone https://github.com/google/ngx_brotli.git \
-    &amp;&amp; cd ngx_brotli \
-    &amp;&amp; git submodule update --init --recursive \
-    &amp;&amp; cd ../nginx-${version} \
-    &amp;&amp; ./configure \
-    --add-dynamic-module=../ngx_brotli \
-    --prefix=/etc/nginx \
-    --sbin-path=/usr/sbin/nginx \
-    --modules-path=/usr/lib/nginx/modules \
-    --conf-path=/etc/nginx/nginx.conf \
-    --error-log-path=/var/log/nginx/error.log \
-    --http-log-path=/var/log/nginx/access.log \
-    --pid-path=/var/run/nginx.pid \
-    --lock-path=/var/run/nginx.lock \
-    --http-client-body-temp-path=/var/cache/nginx/client_temp \
-    --http-proxy-temp-path=/var/cache/nginx/proxy_temp \
-    --http-fastcgi-temp-path=/var/cache/nginx/fastcgi_temp \
-    --http-uwsgi-temp-path=/var/cache/nginx/uwsgi_temp \
-    --http-scgi-temp-path=/var/cache/nginx/scgi_temp \
-    --with-perl_modules_path=/usr/lib/perl5/vendor_perl \
-    --user=nginx \
-    --group=nginx \
-    --with-compat \
-    --with-threads \
-    --with-http_addition_module \
-    --with-http_auth_request_module \
-    --with-http_dav_module \
-    --with-http_flv_module \
-    --with-http_gunzip_module \
-    --with-http_gzip_static_module \
-    --with-http_mp4_module \
-    --with-http_random_index_module \
-    --with-http_realip_module \
-    --with-http_secure_link_module \
-    --with-http_slice_module \
-    --with-http_ssl_module \
-    --with-http_stub_status_module \
-    --with-http_sub_module \
-    --with-http_v2_module \
-    --with-mail \
-    --with-mail_ssl_module \
-    --with-stream \
-    --with-stream_realip_module \
-    --with-stream_ssl_module \
-    --with-stream_ssl_preread_module \
-    &amp;&amp; make modules
-
-
-FROM nginx:${version}-alpine
-
-ARG version
-
-ENV TIME_ZONE=Asia/Shanghai
-
-RUN ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime &amp;&amp; echo $TIME_ZONE &gt; /etc/timezone
-
-COPY --from=builder /root/nginx-${version}/objs/ngx_http_brotli_filter_module.so /usr/lib/nginx/modules/
-COPY --from=builder /root/nginx-${version}/objs/ngx_http_brotli_static_module.so /usr/lib/nginx/modules/
-</code></pre><p>然后是<code>Nginx</code>配置</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#66d9ef">ARG</span> version<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>.17.6<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> nginx:${version}-alpine AS builder</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ARG</span> version<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /root/</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> apk update <span style="color:#f92672">&amp;&amp;</span> apk add --no-cache build-base git pcre-dev openssl-dev zlib-dev <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> wget http://nginx.org/download/nginx-<span style="color:#e6db74">${</span>version<span style="color:#e6db74">}</span>.tar.gz <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> tar zxf nginx-<span style="color:#e6db74">${</span>version<span style="color:#e6db74">}</span>.tar.gz <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> git clone https://github.com/google/ngx_brotli.git <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> cd ngx_brotli <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> git submodule update --init --recursive <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> cd ../nginx-<span style="color:#e6db74">${</span>version<span style="color:#e6db74">}</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> ./configure <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --add-dynamic-module<span style="color:#f92672">=</span>../ngx_brotli <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --prefix<span style="color:#f92672">=</span>/etc/nginx <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --sbin-path<span style="color:#f92672">=</span>/usr/sbin/nginx <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --modules-path<span style="color:#f92672">=</span>/usr/lib/nginx/modules <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --conf-path<span style="color:#f92672">=</span>/etc/nginx/nginx.conf <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --error-log-path<span style="color:#f92672">=</span>/var/log/nginx/error.log <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --http-log-path<span style="color:#f92672">=</span>/var/log/nginx/access.log <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --pid-path<span style="color:#f92672">=</span>/var/run/nginx.pid <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --lock-path<span style="color:#f92672">=</span>/var/run/nginx.lock <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --http-client-body-temp-path<span style="color:#f92672">=</span>/var/cache/nginx/client_temp <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --http-proxy-temp-path<span style="color:#f92672">=</span>/var/cache/nginx/proxy_temp <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --http-fastcgi-temp-path<span style="color:#f92672">=</span>/var/cache/nginx/fastcgi_temp <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --http-uwsgi-temp-path<span style="color:#f92672">=</span>/var/cache/nginx/uwsgi_temp <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --http-scgi-temp-path<span style="color:#f92672">=</span>/var/cache/nginx/scgi_temp <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-perl_modules_path<span style="color:#f92672">=</span>/usr/lib/perl5/vendor_perl <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --user<span style="color:#f92672">=</span>nginx <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --group<span style="color:#f92672">=</span>nginx <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-compat <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-threads <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-http_addition_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-http_auth_request_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-http_dav_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-http_flv_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-http_gunzip_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-http_gzip_static_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-http_mp4_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-http_random_index_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-http_realip_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-http_secure_link_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-http_slice_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-http_ssl_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-http_stub_status_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-http_sub_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-http_v2_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-mail <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-mail_ssl_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-stream <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-stream_realip_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-stream_ssl_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --with-stream_ssl_preread_module <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> make modules<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> nginx:${version}-alpine</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ARG</span> version<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENV</span> TIME_ZONE<span style="color:#f92672">=</span>Asia/Shanghai<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime <span style="color:#f92672">&amp;&amp;</span> echo $TIME_ZONE &gt; /etc/timezone<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /root/nginx-<span style="color:#e6db74">${</span>version<span style="color:#e6db74">}</span>/objs/ngx_http_brotli_filter_module.so /usr/lib/nginx/modules/<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /root/nginx-<span style="color:#e6db74">${</span>version<span style="color:#e6db74">}</span>/objs/ngx_http_brotli_static_module.so /usr/lib/nginx/modules/<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>然后是<code>Nginx</code>配置</p>
 <p>加载动态模块</p>
-<pre><code>load_module modules/ngx_http_brotli_filter_module.so;
-load_module modules/ngx_http_brotli_static_module.so;
-</code></pre><p>在<code>http</code>添加以下内容以启用</p>
-<pre><code>brotli on;
-brotli_comp_level 6;
-brotli_min_length 512;
-brotli_types text/plain text/javascript text/css text/xml text/x-component application/javascript application/x-javascript application/xml application/json application/xhtml+xml application/rss+xml application/atom+xml application/x-font-ttf application/vnd.ms-fontobject image/svg+xml image/x-icon font/opentype;
-brotli_static always;
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="color:#66d9ef">load_module</span> <span style="color:#e6db74">modules/ngx</span><span style="color:#e6db74">_http_brotli_filter_module.so</span>;
+<span style="color:#66d9ef">load_module</span> <span style="color:#e6db74">modules/ngx</span><span style="color:#e6db74">_http_brotli_static_module.so</span>;
+</code></pre></div><p>在<code>http</code>添加以下内容以启用</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="color:#66d9ef">brotli</span> <span style="color:#66d9ef">on</span>;
+<span style="color:#66d9ef">brotli_comp_level</span> <span style="color:#ae81ff">6</span>;
+<span style="color:#66d9ef">brotli_min_length</span> <span style="color:#ae81ff">512</span>;
+<span style="color:#66d9ef">brotli_types</span> <span style="color:#e6db74">text/plain</span> <span style="color:#e6db74">text/javascript</span> <span style="color:#e6db74">text/css</span> <span style="color:#e6db74">text/xml</span> <span style="color:#e6db74">text/x-component</span> <span style="color:#e6db74">application/javascript</span> <span style="color:#e6db74">application/x-javascript</span> <span style="color:#e6db74">application/xml</span> <span style="color:#e6db74">application/json</span> <span style="color:#e6db74">application/xhtml+xml</span> <span style="color:#e6db74">application/rss+xml</span> <span style="color:#e6db74">application/atom+xml</span> <span style="color:#e6db74">application/x-font-ttf</span> <span style="color:#e6db74">application/vnd</span><span style="color:#e6db74">.ms-fontobject</span> <span style="color:#e6db74">image/svg+xml</span> <span style="color:#e6db74">image/x-icon</span> <span style="color:#e6db74">font/opentype</span>;
+<span style="color:#66d9ef">brotli_static</span> <span style="color:#e6db74">always</span>;
+</code></pre></div>
     </div>
     
       <div class="pagination">
