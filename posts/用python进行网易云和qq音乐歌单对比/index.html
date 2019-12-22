@@ -11,7 +11,7 @@
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94/" />
 
-<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="icon" type="image/png" href="https://0vo.moe/img/favicon.png">
 
 
 <link rel="stylesheet" href="https://0vo.moe/assets/style.css">
@@ -47,7 +47,7 @@
     <div class="container">
       <header class="header">
   <span class="header__inner">
-    <a href="/" class="logo" style="text-decoration: none;">
+    <a href="https://0vo.moe/" class="logo" style="text-decoration: none;">
   
     <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
   <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
@@ -65,11 +65,11 @@
     
       
         
-          <li><a href="/about">About</a></li>
+          <li><a href="https://0vo.moe/about">About</a></li>
         
       
         
-          <li><a href="/archive">Archive</a></li>
+          <li><a href="https://0vo.moe/archive">Archive</a></li>
         
       
       
@@ -85,7 +85,7 @@
           <ul class="menu__sub-inner-more hidden">
             
               
-                <li><a href="/index.xml">RSS</a></li>
+                <li><a href="https://0vo.moe/index.xml">RSS</a></li>
               
             
           </ul>
@@ -97,15 +97,15 @@
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/about">About</a></li>
+        <li><a href="https://0vo.moe/about">About</a></li>
       
     
       
-        <li><a href="/archive">Archive</a></li>
+        <li><a href="https://0vo.moe/archive">Archive</a></li>
       
     
       
-        <li><a href="/index.xml">RSS</a></li>
+        <li><a href="https://0vo.moe/index.xml">RSS</a></li>
       
     
   </ul>
@@ -162,11 +162,11 @@
 <p>初步打算根据歌曲名来筛选，首先就要获取到这两家的歌单数据</p>
 <h2 id="qq">qq音乐</h2>
 <p>首先登录到qq音乐的网页版，进入歌单页面，F12大法</p>
-<p><img src="/img/2019/11/4113408332.png" alt="image-20191110145947495"></p>
+<p><img src="https://0vo.moe/img/2019/11/4113408332.png" alt="image-20191110145947495"></p>
 <p>可以看到歌曲信息是放在这样一个结构里的，然后查看网页源码却找不到这些内容，由此可见这些数据是动态加载的，要获取它们只能找到相应的接口，然后我找到了这个</p>
-<p><img src="/img/2019/11/725160611.png" alt="image-20191110150232596"></p>
+<p><img src="https://0vo.moe/img/2019/11/725160611.png" alt="image-20191110150232596"></p>
 <p>应该是歌单的数据接口，换用postman请求</p>
-<p><img src="/img/2019/11/2455323748.png" alt="image-20191110150501484"></p>
+<p><img src="https://0vo.moe/img/2019/11/2455323748.png" alt="image-20191110150501484"></p>
 <p>果然是歌单数据，<code>songlist</code>这个数组里应该就是所有的歌曲了，注意GET请求参数中的<code>song_num</code>参数，这个是返回的歌曲数量，把他改为歌单里歌曲总数就可以拿到所有歌曲信息了</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">header <span style="color:#f92672">=</span> {
     <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Referer</span><span style="color:#e6db74">&#39;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">https://y.qq.com/</span><span style="color:#e6db74">&#39;</span>,
@@ -280,7 +280,7 @@ results <span style="color:#f92672">=</span> set(neteaseList)<span style="color:
         <footer class="footer">
   <div class="footer__inner">
     
-      <a href="/" class="logo" style="text-decoration: none;">
+      <a href="https://0vo.moe/" class="logo" style="text-decoration: none;">
   
     <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
   <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
