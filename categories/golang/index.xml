@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on Kong&#39;s Blog</title>
-    <link>https://0vo.moe/categories/golang.html</link>
+    <link>https://0vo.moe/categories/golang/</link>
     <description>Recent content in Golang on Kong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -13,10 +13,10 @@
     
     <item>
       <title>关于Golang随机数生成重复数字</title>
-      <link>https://0vo.moe/posts/%E5%85%B3%E4%BA%8Egolang%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E9%87%8D%E5%A4%8D%E6%95%B0%E5%AD%97.html</link>
+      <link>https://0vo.moe/posts/%E5%85%B3%E4%BA%8Egolang%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E9%87%8D%E5%A4%8D%E6%95%B0%E5%AD%97/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/posts/%E5%85%B3%E4%BA%8Egolang%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E9%87%8D%E5%A4%8D%E6%95%B0%E5%AD%97.html</guid>
+      <guid>https://0vo.moe/posts/%E5%85%B3%E4%BA%8Egolang%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E9%87%8D%E5%A4%8D%E6%95%B0%E5%AD%97/</guid>
       <description>最近在尝试用Golang写一个随机图API，但是关于随机数的生成产生了一些问题 原来的代码是这样的 func findImage(s string) []byte { imageList := make([]string, 0) //遍历目录 err := filepath.Walk(s, func(p string, f os.FileInfo,</description>
     </item>
     

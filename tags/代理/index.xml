@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>代理 on Kong&#39;s Blog</title>
-    <link>https://0vo.moe/tags/%E4%BB%A3%E7%90%86.html</link>
+    <link>https://0vo.moe/tags/%E4%BB%A3%E7%90%86/</link>
     <description>Recent content in 代理 on Kong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -13,10 +13,10 @@
     
     <item>
       <title>在Linux上使用ss客户端并设置代理</title>
-      <link>https://0vo.moe/posts/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8ss%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B9%B6%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86.html</link>
+      <link>https://0vo.moe/posts/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8ss%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B9%B6%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/</link>
       <pubDate>Sat, 24 Nov 2018 11:19:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/posts/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8ss%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B9%B6%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86.html</guid>
+      <guid>https://0vo.moe/posts/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8ss%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B9%B6%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/</guid>
       <description>最近在国内阿里云上git clone让我感受到了国内网络到github的糟糕程度，实在是慢的想砸电脑，于是就想着设置一个代理，shadowso</description>
     </item>
     

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Kong&#39;s Blog</title>
-    <link>https://0vo.moe/tags/python.html</link>
+    <link>https://0vo.moe/tags/python/</link>
     <description>Recent content in Python on Kong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -13,37 +13,37 @@
     
     <item>
       <title>用Python进行网易云和qq音乐歌单对比</title>
-      <link>https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94.html</link>
+      <link>https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94/</link>
       <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94.html</guid>
+      <guid>https://0vo.moe/posts/%E7%94%A8python%E8%BF%9B%E8%A1%8C%E7%BD%91%E6%98%93%E4%BA%91%E5%92%8Cqq%E9%9F%B3%E4%B9%90%E6%AD%8C%E5%8D%95%E5%AF%B9%E6%AF%94/</guid>
       <description>由于网易云音乐版权越来越少，歌单里的歌一首首的灰掉，于是就想着换到qq音乐。但是用qq音乐导入网易云的歌单后还是有一部分歌没有匹配到，而qq</description>
     </item>
     
     <item>
       <title>[脚本]备份网站至又拍云</title>
-      <link>https://0vo.moe/posts/%E8%84%9A%E6%9C%AC%E5%A4%87%E4%BB%BD%E7%BD%91%E7%AB%99%E8%87%B3%E5%8F%88%E6%8B%8D%E4%BA%91.html</link>
+      <link>https://0vo.moe/posts/%E8%84%9A%E6%9C%AC%E5%A4%87%E4%BB%BD%E7%BD%91%E7%AB%99%E8%87%B3%E5%8F%88%E6%8B%8D%E4%BA%91/</link>
       <pubDate>Sun, 10 Mar 2019 03:27:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/posts/%E8%84%9A%E6%9C%AC%E5%A4%87%E4%BB%BD%E7%BD%91%E7%AB%99%E8%87%B3%E5%8F%88%E6%8B%8D%E4%BA%91.html</guid>
+      <guid>https://0vo.moe/posts/%E8%84%9A%E6%9C%AC%E5%A4%87%E4%BB%BD%E7%BD%91%E7%AB%99%E8%87%B3%E5%8F%88%E6%8B%8D%E4%BA%91/</guid>
       <description>没事做，闲得无聊就摸了一个脚本出来 项目地址：https://github.com/kzw200015/backup2upyun 萌新作品，可能</description>
     </item>
     
     <item>
       <title>Hexo的自动化部署折腾记录</title>
-      <link>https://0vo.moe/posts/hexo%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95.html</link>
+      <link>https://0vo.moe/posts/hexo%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/</link>
       <pubDate>Sun, 10 Mar 2019 03:27:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/posts/hexo%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95.html</guid>
+      <guid>https://0vo.moe/posts/hexo%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/</guid>
       <description>Hexo作为一个静态博客系统，一般都是部署到Github或Coding等平台，零成本就能搭建起一个博客，利用插件就可以直接推送到Github</description>
     </item>
     
     <item>
       <title>在VS2019环境下配置ArcObject(ArcEngine)开发环境</title>
-      <link>https://0vo.moe/posts/%E5%9C%A8vs2019%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEarcobjectarcengine%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83.html</link>
+      <link>https://0vo.moe/posts/%E5%9C%A8vs2019%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEarcobjectarcengine%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
       <pubDate>Sun, 10 Mar 2019 03:27:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/posts/%E5%9C%A8vs2019%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEarcobjectarcengine%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83.html</guid>
+      <guid>https://0vo.moe/posts/%E5%9C%A8vs2019%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEarcobjectarcengine%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
       <description>由于学习需要，要安装低版本的ArcEngine，可是低版本并不支持VS2019，所以需要用一些技巧骗过安装程序，在这记录一下安装过程 需要用到</description>
     </item>
     
