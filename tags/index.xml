@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kong&#39;s Blog</title>
-    <link>https://0vo.moe/tags/</link>
+    <link>https://0vo.moe/tags.html</link>
     <description>Recent content in Tags on Kong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -13,136 +13,136 @@
     
     <item>
       <title>Python</title>
-      <link>https://0vo.moe/tags/python/</link>
+      <link>https://0vo.moe/tags/python.html</link>
       <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/tags/python/</guid>
+      <guid>https://0vo.moe/tags/python.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Golang</title>
-      <link>https://0vo.moe/tags/golang/</link>
+      <link>https://0vo.moe/tags/golang.html</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/tags/golang/</guid>
+      <guid>https://0vo.moe/tags/golang.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https://0vo.moe/tags/linux/</link>
+      <link>https://0vo.moe/tags/linux.html</link>
       <pubDate>Sat, 18 May 2019 07:13:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/tags/linux/</guid>
+      <guid>https://0vo.moe/tags/linux.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>shadowsocks</title>
-      <link>https://0vo.moe/tags/shadowsocks/</link>
+      <link>https://0vo.moe/tags/shadowsocks.html</link>
       <pubDate>Sat, 18 May 2019 07:13:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/tags/shadowsocks/</guid>
+      <guid>https://0vo.moe/tags/shadowsocks.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>HACKINTOSH</title>
-      <link>https://0vo.moe/tags/hackintosh/</link>
+      <link>https://0vo.moe/tags/hackintosh.html</link>
       <pubDate>Sun, 31 Mar 2019 14:26:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/tags/hackintosh/</guid>
+      <guid>https://0vo.moe/tags/hackintosh.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>黑苹果</title>
-      <link>https://0vo.moe/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/</link>
+      <link>https://0vo.moe/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C.html</link>
       <pubDate>Sun, 31 Mar 2019 14:26:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/</guid>
+      <guid>https://0vo.moe/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>script</title>
-      <link>https://0vo.moe/tags/script/</link>
+      <link>https://0vo.moe/tags/script.html</link>
       <pubDate>Sun, 10 Mar 2019 03:27:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/tags/script/</guid>
+      <guid>https://0vo.moe/tags/script.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>VPS</title>
-      <link>https://0vo.moe/tags/vps/</link>
+      <link>https://0vo.moe/tags/vps.html</link>
       <pubDate>Sun, 10 Mar 2019 03:27:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/tags/vps/</guid>
+      <guid>https://0vo.moe/tags/vps.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>https://0vo.moe/tags/docker/</link>
+      <link>https://0vo.moe/tags/docker.html</link>
       <pubDate>Sat, 09 Feb 2019 01:20:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/tags/docker/</guid>
+      <guid>https://0vo.moe/tags/docker.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>nextcloud</title>
-      <link>https://0vo.moe/tags/nextcloud/</link>
+      <link>https://0vo.moe/tags/nextcloud.html</link>
       <pubDate>Sat, 09 Feb 2019 01:20:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/tags/nextcloud/</guid>
+      <guid>https://0vo.moe/tags/nextcloud.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>v2ray</title>
-      <link>https://0vo.moe/tags/v2ray/</link>
+      <link>https://0vo.moe/tags/v2ray.html</link>
       <pubDate>Thu, 24 Jan 2019 20:07:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/tags/v2ray/</guid>
+      <guid>https://0vo.moe/tags/v2ray.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>shell</title>
-      <link>https://0vo.moe/tags/shell/</link>
+      <link>https://0vo.moe/tags/shell.html</link>
       <pubDate>Mon, 03 Dec 2018 08:13:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/tags/shell/</guid>
+      <guid>https://0vo.moe/tags/shell.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>zsh</title>
-      <link>https://0vo.moe/tags/zsh/</link>
+      <link>https://0vo.moe/tags/zsh.html</link>
       <pubDate>Mon, 03 Dec 2018 08:13:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/tags/zsh/</guid>
+      <guid>https://0vo.moe/tags/zsh.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>proxy</title>
-      <link>https://0vo.moe/tags/proxy/</link>
+      <link>https://0vo.moe/tags/proxy.html</link>
       <pubDate>Sat, 24 Nov 2018 11:19:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/tags/proxy/</guid>
+      <guid>https://0vo.moe/tags/proxy.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>代理</title>
-      <link>https://0vo.moe/tags/%E4%BB%A3%E7%90%86/</link>
+      <link>https://0vo.moe/tags/%E4%BB%A3%E7%90%86.html</link>
       <pubDate>Sat, 24 Nov 2018 11:19:00 +0000</pubDate>
       
-      <guid>https://0vo.moe/tags/%E4%BB%A3%E7%90%86/</guid>
+      <guid>https://0vo.moe/tags/%E4%BB%A3%E7%90%86.html</guid>
       <description></description>
     </item>
     

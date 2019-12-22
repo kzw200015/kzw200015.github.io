@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>在VS2019环境下配置ArcObject(ArcEngine)开发环境 :: Kong&#39;s Blog</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="由于学习需要，要安装低版本的ArcEngine，可是低版本并不支持VS2019，所以需要用一些技巧骗过安装程序，在这记录一下安装过程 需要用到"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://0vo.moe/posts/%E5%9C%A8vs2019%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEarcobjectarcengine%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83.html" />
+
+<link rel="icon" type="image/png" href="/img/favicon.png">
+
+
+<link rel="stylesheet" href="https://0vo.moe/assets/style.css">
+
+
+<link rel="stylesheet" href="https://0vo.moe/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://0vo.moe/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://0vo.moe/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="在VS2019环境下配置ArcObject(ArcEngine)开发环境"/>
+<meta name="twitter:description" content="由于学习需要，要安装低版本的ArcEngine，可是低版本并不支持VS2019，所以需要用一些技巧骗过安装程序，在这记录一下安装过程 需要用到"/>
+
+
+
+<meta property="og:title" content="在VS2019环境下配置ArcObject(ArcEngine)开发环境" />
+<meta property="og:description" content="由于学习需要，要安装低版本的ArcEngine，可是低版本并不支持VS2019，所以需要用一些技巧骗过安装程序，在这记录一下安装过程 需要用到" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://0vo.moe/posts/%E5%9C%A8vs2019%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEarcobjectarcengine%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83.html" />
+<meta property="article:published_time" content="2019-03-10T03:27:00+00:00" />
+<meta property="article:modified_time" content="2019-03-10T03:27:00+00:00" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Kong&#39;s Blog</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/archive">Archive</a></li>
+        
+      
+      
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">
+            Show more
+            <span class="menu__sub-inner-more-trigger-icon"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+          </li>
+
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="/index.xml">RSS</a></li>
+              
+            
+          </ul>
+        </ul>
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/archive">Archive</a></li>
+      
+    
+      
+        <li><a href="/index.xml">RSS</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  <div class="post">
+    <h2 class="post-title"><a href="https://0vo.moe/posts/%E5%9C%A8vs2019%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEarcobjectarcengine%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83.html">在VS2019环境下配置ArcObject(ArcEngine)开发环境</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2019-03-10
+        </span>
+      
+      
+      
+        <span class="post-read-time">— 1 min read</span>
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://0vo.moe/tags/vps/">VPS</a>&nbsp;
+        
+          #<a href="https://0vo.moe/tags/script/">script</a>&nbsp;
+        
+          #<a href="https://0vo.moe/tags/python/">Python</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p>由于学习需要，要安装低版本的ArcEngine，可是低版本并不支持VS2019，所以需要用一些技巧骗过安装程序，在这记录一下安装过程</p>
+<p>需要用到的文件：https://pan.baidu.com/s/1VuwsIH1Knh-WW3uMaJpwXQ 提取码: ga1y</p>
+<h2 id="arcgis-desktop">安装ArcGIS Desktop</h2>
+<h3 id="heading">安装主程序</h3>
+<p>打开安装程序，如下图点击安装</p>
+<p><img src="/img/2019/10/1434691592.png" alt="image-20191031162631665"></p>
+<h3 id="license-manager">安装并破解License Manager</h3>
+<p><img src="/img/2019/10/4230943158.png" alt="image-20191031162825994"></p>
+<p>安装完毕后，点击停止服务，并将破解补丁复制到License Manager的安装目录，覆盖掉同名文件，然后重新启动服务</p>
+<h3 id="heading-1">安装中文语言包</h3>
+<p>直接运行目录下的安装包即可</p>
+<h2 id="arcengine">安装ArcEngine</h2>
+<p>由于ArcEngine 10.2只支持VS2010，所以无法直接安装。需要更改注册表来骗过安装程序，将VS2010的安装目录指向VS2019的安装目录</p>
+<p>新建空文件，扩展名为<code>.reg</code>，加入以下内容</p>
+<pre><code>Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\VisualStudio\11.0]
+&quot;InstallDir&quot;=&quot;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE&quot;
+&quot;ShellFolder&quot;=&quot;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community&quot;
+</code></pre><p>保存后双击导入注册表，再次运行安装程序即可</p>
+<p><img src="/img/2019/10/2852581669.png" alt="image-20191031164221019"></p>
+<h2 id="visual-studio">配置Visual Studio</h2>
+<p>新建Windows窗体应用程序，<code>Ctrl</code>+<code>Alt</code>+<code>x</code>打开工具箱，右键选择添加选项卡</p>
+<p><img src="/img/2019/10/707152354.png" alt="image-20191031164636920"></p>
+<p>然后右键该选项卡，点击选择项</p>
+<p><img src="/img/2019/10/1317002807.png" alt="image-20191031164751446"></p>
+<p>勾选所有ArcEngine控件</p>
+<p><img src="/img/2019/10/427234064.png" alt="image-20191031164947433"></p>
+<p>之后就可以看到，相关控件已经出现在工具箱，并已经可以使用了</p>
+<p><img src="/img/2019/10/2090523104.png" alt="image-20191031165116512"></p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="https://0vo.moe/posts/hexo%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95.html">
+                <span class="button__icon">←</span>
+                <span class="button__text">Hexo的自动化部署折腾记录</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="https://0vo.moe/posts/%E4%BD%BF%E7%94%A8docker%E9%83%A8%E7%BD%B2nextcloud%E5%B9%B6%E8%BF%9E%E6%8E%A5%E5%88%B0%E5%AE%BF%E4%B8%BB%E6%9C%BA%E7%9A%84mysql%E6%95%B0%E6%8D%AE%E5%BA%93.html">
+                <span class="button__text">使用docker部署nextcloud并连接到宿主机的mysql数据库</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://0vo.moe/assets/md5.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: 'fa783045e1ed26ae6bf4',
+        clientSecret: 'd425efee09272bdd21175c324bb8691d04ed0a87',
+        repo: 'kzw200015.github.io',
+        owner: 'kzw200015',
+        admin: ['kzw200015'],
+        id: md5(location.pathname),
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Kong&#39;s Blog</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://0vo.moe/assets/main.js"></script>
+<script src="https://0vo.moe/assets/prism.js"></script>
+
+      
+    </div>
+
+    
+  </body>
+</html>
