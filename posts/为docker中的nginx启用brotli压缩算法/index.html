@@ -211,8 +211,8 @@
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /root/nginx-<span style="color:#e6db74">${</span>version<span style="color:#e6db74">}</span>/objs/ngx_http_brotli_static_module.so /usr/lib/nginx/modules/<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>然后是<code>Nginx</code>配置</p>
 <p>加载动态模块</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="color:#66d9ef">load_module</span> <span style="color:#e6db74">modules/ngx</span><span style="color:#e6db74">_http_brotli_filter_module.so</span>;
-<span style="color:#66d9ef">load_module</span> <span style="color:#e6db74">modules/ngx</span><span style="color:#e6db74">_http_brotli_static_module.so</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="color:#66d9ef">load_module</span> <span style="color:#e6db74">/usr/lib/nginx/modules/ngx_http_brotli_filter_module.so</span>;
+<span style="color:#66d9ef">load_module</span> <span style="color:#e6db74">/usr/lib/nginx/modules/ngx_http_brotli_static_module.so</span>;
 </code></pre></div><p>在<code>http</code>添加以下内容以启用</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="color:#66d9ef">brotli</span> <span style="color:#66d9ef">on</span>;
 <span style="color:#66d9ef">brotli_comp_level</span> <span style="color:#ae81ff">6</span>;
