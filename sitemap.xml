@@ -3,7 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://0vo.moe/categories/</loc>
+    <lastmod>2019-12-31T12:20:35+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://0vo.moe/</loc>
+    <lastmod>2019-12-31T12:20:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://0vo.moe/categories/linux/</loc>
+    <lastmod>2019-12-31T12:20:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://0vo.moe/tags/linux/</loc>
+    <lastmod>2019-12-31T12:20:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://0vo.moe/tags/openwrt/</loc>
     <lastmod>2019-12-31T12:20:35+08:00</lastmod>
   </url>
   
@@ -13,8 +33,23 @@
   </url>
   
   <url>
+    <loc>https://0vo.moe/tags/</loc>
+    <lastmod>2019-12-31T12:20:35+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://0vo.moe/posts/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E7%BC%96%E8%AF%91openwrt/</loc>
     <lastmod>2019-12-31T12:20:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://0vo.moe/tags/docker/</loc>
+    <lastmod>2019-12-21T17:25:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://0vo.moe/tags/nginx/</loc>
+    <lastmod>2019-12-21T17:25:19+08:00</lastmod>
   </url>
   
   <url>
@@ -28,22 +63,12 @@
   </url>
   
   <url>
-    <loc>https://0vo.moe/categories/</loc>
-    <lastmod>2019-12-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://0vo.moe/categories/python/</loc>
-    <lastmod>2019-12-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://0vo.moe/tags/python/</loc>
     <lastmod>2019-12-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://0vo.moe/tags/</loc>
+    <loc>https://0vo.moe/categories/python/</loc>
     <lastmod>2019-12-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -65,16 +90,6 @@
   <url>
     <loc>https://0vo.moe/posts/%E5%85%B3%E4%BA%8Egolang%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E9%87%8D%E5%A4%8D%E6%95%B0%E5%AD%97/</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://0vo.moe/categories/linux/</loc>
-    <lastmod>2019-05-18T07:13:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://0vo.moe/tags/linux/</loc>
-    <lastmod>2019-05-18T07:13:00+00:00</lastmod>
   </url>
   
   <url>
@@ -133,11 +148,6 @@
   </url>
   
   <url>
-    <loc>https://0vo.moe/tags/docker/</loc>
-    <lastmod>2019-02-09T01:20:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://0vo.moe/tags/nextcloud/</loc>
     <lastmod>2019-02-09T01:20:00+00:00</lastmod>
   </url>
@@ -185,10 +195,6 @@
   <url>
     <loc>https://0vo.moe/posts/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8ss%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B9%B6%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/</loc>
     <lastmod>2018-11-24T11:19:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://0vo.moe/archive/</loc>
   </url>
   
 </urlset>

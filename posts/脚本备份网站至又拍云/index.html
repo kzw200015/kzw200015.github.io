@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
   <head>
     
       <title>[脚本]备份网站至又拍云 :: Kong&#39;s Blog</title>
@@ -65,17 +65,24 @@
     
       
         
-          <li><a href="/about">About</a></li>
+          <li><a href="/post">归档</a></li>
         
       
         
-          <li><a href="/archive">Archive</a></li>
+          <li><a href="/categories">分类</a></li>
+        
+      
+        
+          <li><a href="/tags">标签云</a></li>
         
       
         
           <li><a href="/index.xml">RSS</a></li>
         
       
+        
+          <li><a href="/about">关于</a></li>
+        
       
     
   </ul>
@@ -83,15 +90,23 @@
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/about">About</a></li>
+        <li><a href="/post">归档</a></li>
       
     
       
-        <li><a href="/archive">Archive</a></li>
+        <li><a href="/categories">分类</a></li>
+      
+    
+      
+        <li><a href="/tags">标签云</a></li>
       
     
       
         <li><a href="/index.xml">RSS</a></li>
+      
+    
+      
+        <li><a href="/about">关于</a></li>
       
     
   </ul>
@@ -156,7 +171,7 @@
 <li>基于<code>python3</code></li>
 <li></li>
 </ul>
-<h2 id="heading">使用方法</h2>
+<h2 id="使用方法">使用方法</h2>
 <p>直接使用git clone整个库</p>
 <p><code>git clone https://github.com/kzw200015/backup2upyun.git</code></p>
 <p>安装 python 环境</p>
@@ -184,7 +199,7 @@ mysql_passwd = '' #数据库密码
 </code></pre><p>执行脚本</p>
 <p><code>./main.py</code></p>
 <p>如果提示没有权限就执行<code>chmod +x main.py</code>后再执行</p>
-<h2 id="heading-1">定时任务</h2>
+<h2 id="定时任务">定时任务</h2>
 <p>用<code>cron</code>实现
 执行<code>crontab -e</code>，加入以下内容</p>
 <pre><code>LANG='en_US.UTF-8'

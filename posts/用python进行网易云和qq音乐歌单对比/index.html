@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
   <head>
     
       <title>用Python进行网易云和qq音乐歌单对比 :: Kong&#39;s Blog</title>
@@ -65,17 +65,24 @@
     
       
         
-          <li><a href="/about">About</a></li>
+          <li><a href="/post">归档</a></li>
         
       
         
-          <li><a href="/archive">Archive</a></li>
+          <li><a href="/categories">分类</a></li>
+        
+      
+        
+          <li><a href="/tags">标签云</a></li>
         
       
         
           <li><a href="/index.xml">RSS</a></li>
         
       
+        
+          <li><a href="/about">关于</a></li>
+        
       
     
   </ul>
@@ -83,15 +90,23 @@
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/about">About</a></li>
+        <li><a href="/post">归档</a></li>
       
     
       
-        <li><a href="/archive">Archive</a></li>
+        <li><a href="/categories">分类</a></li>
+      
+    
+      
+        <li><a href="/tags">标签云</a></li>
       
     
       
         <li><a href="/index.xml">RSS</a></li>
+      
+    
+      
+        <li><a href="/about">关于</a></li>
       
     
   </ul>
@@ -144,7 +159,7 @@
     <div class="post-content">
       <p>由于网易云音乐版权越来越少，歌单里的歌一首首的灰掉，于是就想着换到qq音乐。但是用qq音乐导入网易云的歌单后还是有一部分歌没有匹配到，而qq音乐也没告诉你哪些没匹配到，人工一个个筛选实在不现实，所以就想用代码来解决这个问题。</p>
 <p>初步打算根据歌曲名来筛选，首先就要获取到这两家的歌单数据</p>
-<h2 id="qq">qq音乐</h2>
+<h2 id="qq音乐">qq音乐</h2>
 <p>首先登录到qq音乐的网页版，进入歌单页面，F12大法</p>
 <p><img src="/img/2019/11/4113408332.png" alt="image-20191110145947495"></p>
 <p>可以看到歌曲信息是放在这样一个结构里的，然后查看网页源码却找不到这些内容，由此可见这些数据是动态加载的，要获取它们只能找到相应的接口，然后我找到了这个</p>
@@ -174,7 +189,7 @@ qqList <span style="color:#f92672">=</span> []
     qqList<span style="color:#f92672">.</span>append(
         re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">(</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">(.*?</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">))|(</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">（.*?</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">）)|(</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">[.*?</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">])</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#39;</span>, song[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">title</span><span style="color:#e6db74">&#39;</span>])
 </code></pre></div><p>这里我用正则匹配去掉了所有的括号内容，提高之后筛选的精确度，所有歌曲的名称都存到了<code>qqList</code>这个列表里</p>
-<h2 id="heading">网易云音乐</h2>
+<h2 id="网易云音乐">网易云音乐</h2>
 <p>和qq音乐一样是动态加载，接口地址<code>https://music.163.com/playlist?id=66699402</code>，<code>id</code>是歌单的id</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">header <span style="color:#f92672">=</span> {
     <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Referer</span><span style="color:#e6db74">&#39;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">https://music.163.com/</span><span style="color:#e6db74">&#39;</span>,
@@ -197,7 +212,7 @@ neteaseList <span style="color:#f92672">=</span> []
         re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">(</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">(.*?</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">))|(</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">（.*?</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">）)|(</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">[.*?</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">])</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#39;</span>,
                song<span style="color:#f92672">.</span>contents[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>text))
 </code></pre></div><p>同样将歌曲名处理括号后保存在<code>neteaseList</code>列表里</p>
-<h2 id="heading-1">数据分析</h2>
+<h2 id="数据分析">数据分析</h2>
 <p>为了对比两个歌单，我打算用<code>difflib</code>库来对比歌曲名的相似程度</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">songList <span style="color:#f92672">=</span> set()
 <span style="color:#66d9ef">for</span> s1 <span style="color:#f92672">in</span> neteaseList:

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
   <head>
     
       <title>V2ray搭建Nginx&#43;TLS&#43;Webocket代理方案 :: Kong&#39;s Blog</title>
@@ -65,17 +65,24 @@
     
       
         
-          <li><a href="/about">About</a></li>
+          <li><a href="/post">归档</a></li>
         
       
         
-          <li><a href="/archive">Archive</a></li>
+          <li><a href="/categories">分类</a></li>
+        
+      
+        
+          <li><a href="/tags">标签云</a></li>
         
       
         
           <li><a href="/index.xml">RSS</a></li>
         
       
+        
+          <li><a href="/about">关于</a></li>
+        
       
     
   </ul>
@@ -83,15 +90,23 @@
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/about">About</a></li>
+        <li><a href="/post">归档</a></li>
       
     
       
-        <li><a href="/archive">Archive</a></li>
+        <li><a href="/categories">分类</a></li>
+      
+    
+      
+        <li><a href="/tags">标签云</a></li>
       
     
       
         <li><a href="/index.xml">RSS</a></li>
+      
+    
+      
+        <li><a href="/about">关于</a></li>
       
     
   </ul>
@@ -145,7 +160,7 @@
 
     <div class="post-content">
       <p>这应该是目前理论最隐蔽的代理方式，走的是真正意义上的<code>https</code>流量，是实际的网站流量，当然前提是你有一个网站，不过没有也没关系，只不过比较假而已 ::(滑稽)</p>
-<h2 id="v2ray"><code>V2ray</code>服务端配置</h2>
+<h2 id="v2ray服务端配置"><code>V2ray</code>服务端配置</h2>
 <p>配置文件位于<code>/etc/v2ray/config.json</code>，示例配置如下</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#f92672">&#34;inbounds&#34;</span>: [
@@ -176,7 +191,7 @@
     }
   ]
 }
-</code></pre></div><h2 id="nginx"><code>Nginx</code>反向代理配置</h2>
+</code></pre></div><h2 id="nginx反向代理配置"><code>Nginx</code>反向代理配置</h2>
 <p>示例配置</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span> <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">v</span><span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">y</span> { <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">此</span><span style="color:#960050;background-color:#1e0010">处</span><span style="color:#960050;background-color:#1e0010">分</span><span style="color:#960050;background-color:#1e0010">流</span><span style="color:#960050;background-color:#1e0010">路</span><span style="color:#960050;background-color:#1e0010">径</span><span style="color:#960050;background-color:#1e0010">需</span><span style="color:#960050;background-color:#1e0010">与</span><span style="color:#960050;background-color:#1e0010">V</span><span style="color:#960050;background-color:#1e0010">2</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">y</span><span style="color:#960050;background-color:#1e0010">配</span><span style="color:#960050;background-color:#1e0010">置</span><span style="color:#960050;background-color:#1e0010">的</span><span style="color:#960050;background-color:#1e0010">路</span><span style="color:#960050;background-color:#1e0010">径</span><span style="color:#960050;background-color:#1e0010">一</span><span style="color:#960050;background-color:#1e0010">致</span>
     <span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">x</span><span style="color:#960050;background-color:#1e0010">y</span><span style="color:#960050;background-color:#1e0010">_</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">t</span> <span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">f</span><span style="color:#960050;background-color:#1e0010">;</span>
@@ -188,7 +203,7 @@
 }
 </code></pre></div><p>当然这部分需要加到配置https的部分
 需要注意的是，你的需要确保网站不会拦截到<code>https://yourdomain/v2ray</code>的请求，因为某些网站模板会直接返回一个自定义的404页面，导致无法使用代理，我踩过的坑不希望别人再踩</p>
-<h2 id="v2ray-1"><code>V2ray</code>客户端配置</h2>
+<h2 id="v2ray客户端配置"><code>V2ray</code>客户端配置</h2>
 <p>示例配置</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#f92672">&#34;inbounds&#34;</span>: [
@@ -230,7 +245,7 @@
     }
   ]
 }
-</code></pre></div><h2 id="v2rayshadowsocks">使用<code>V2ray</code>集成的<code>shadowsocks</code></h2>
+</code></pre></div><h2 id="使用v2ray集成的shadowsocks">使用<code>V2ray</code>集成的<code>shadowsocks</code></h2>
 <p>由于<code>V2ray</code>的安卓客户端极其难用，bug也多，所以在手机上还是使用<code>shadowsocks</code>，但是<code>shadowsocks</code>的配置就比较简单了
 示例配置</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{

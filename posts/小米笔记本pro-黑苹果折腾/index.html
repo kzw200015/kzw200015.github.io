@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
   <head>
     
       <title>小米笔记本Pro 黑苹果折腾 :: Kong&#39;s Blog</title>
@@ -65,17 +65,24 @@
     
       
         
-          <li><a href="/about">About</a></li>
+          <li><a href="/post">归档</a></li>
         
       
         
-          <li><a href="/archive">Archive</a></li>
+          <li><a href="/categories">分类</a></li>
+        
+      
+        
+          <li><a href="/tags">标签云</a></li>
         
       
         
           <li><a href="/index.xml">RSS</a></li>
         
       
+        
+          <li><a href="/about">关于</a></li>
+        
       
     
   </ul>
@@ -83,15 +90,23 @@
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/about">About</a></li>
+        <li><a href="/post">归档</a></li>
       
     
       
-        <li><a href="/archive">Archive</a></li>
+        <li><a href="/categories">分类</a></li>
+      
+    
+      
+        <li><a href="/tags">标签云</a></li>
       
     
       
         <li><a href="/index.xml">RSS</a></li>
+      
+    
+      
+        <li><a href="/about">关于</a></li>
       
     
   </ul>
@@ -149,32 +164,32 @@
 <img src="/img/2019/03/QQ20190331-213839.png" alt="macOS"></p>
 <p><strong>感谢<a href="https://github.com/daliansky">黑果小兵</a>提供的EFI文件，感谢<a href="https://www.bilibili.com/video/av42261432">MicroKou</a>录制的视频教程</strong></p>
 <p>相关工具：<a href="https://ncisteducn-my.sharepoint.com/:u:/g/personal/201704024108dy_ncist_edu_cn/ERBkOpolEmZOsjl8ZRek6TAB2vUQ7OEGwx7EJM8_vV82PQ?e=GI3tlN">下载地址</a></p>
-<h2 id="heading">准备安装介质</h2>
-<h3 id="heading-1">下载镜像</h3>
+<h2 id="准备安装介质">准备安装介质</h2>
+<h3 id="下载镜像">下载镜像</h3>
 <p>地址：<a href="https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/">https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/</a>
 一般下载最新的就好</p>
-<h3 id="heading-2">制作介质</h3>
+<h3 id="制作介质">制作介质</h3>
 <p>准备8G以上的U盘，使用etcher将镜像刻录进U盘</p>
-<h2 id="heading-3">准备本机引导</h2>
+<h2 id="准备本机引导">准备本机引导</h2>
 <p><strong>注：EFI分区必须大于200MB</strong>
 使用Disk Genius或其他软件挂载EFI分区，将EFI文件复制进EFI分区，同时使用BOOTICE添加Clover的引导</p>
-<h2 id="heading-4">安装系统</h2>
+<h2 id="安装系统">安装系统</h2>
 <p>重启选择从u盘启动，记住事先要关闭安全启动和快速启动，并且准备一个空白分区用来装系统，大小建议80G+。
 然后使用磁盘工具抹除准备好的分区，如果EFI分区小于200MB，在这一步就会报错。之后根据向导就可以了。</p>
 <p>安装完毕拔掉U盘，从Clover引导进系统</p>
-<h2 id="heading-5">后续完善</h2>
-<h3 id="heading-6">生成序列号</h3>
+<h2 id="后续完善">后续完善</h2>
+<h3 id="生成序列号">生成序列号</h3>
 <p>这一步操作有些复杂，不好描述，详情查看视频</p>
-<h3 id="heading-7">解决耳机没有声音</h3>
+<h3 id="解决耳机没有声音">解决耳机没有声音</h3>
 <p>运行<code>ALCPlugFix</code>目录中的<code>chinese_install.command</code></p>
-<h3 id="heading-8">解决麦克风失灵</h3>
+<h3 id="解决麦克风失灵">解决麦克风失灵</h3>
 <p>挂载EFI分区，编辑<code>EFI/CLOVER/config.plist</code>，将<code>layout-id</code>由99改为28</p>
-<h3 id="heading-9">优化显示效果</h3>
+<h3 id="优化显示效果">优化显示效果</h3>
 <p>运行<code>HIDPI for Mi Pro</code>目录中的<code>install.command</code></p>
-<h3 id="vs-code">解决VS Code等软件字体发虚</h3>
+<h3 id="解决vs-code等软件字体发虚">解决VS Code等软件字体发虚</h3>
 <p>终端执行<code>defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO</code>
 原因是字体抗锯齿默认被关闭了</p>
-<h3 id="macos">关闭macOS对未验证发布者软件的限制</h3>
+<h3 id="关闭macos对未验证发布者软件的限制">关闭macOS对未验证发布者软件的限制</h3>
 <p>终端执行<code>sudo spctl --master-disable</code></p>
 <p>所有操作做完以后清理驱动缓存，重启即可</p>
 

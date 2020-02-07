@@ -6,10 +6,28 @@
     <description>Recent content in linux on Kong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 18 May 2019 07:13:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 12:20:35 +0800</lastBuildDate>
     
 	<atom:link href="https://0vo.moe/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>自己动手编译K2P的OpenWrt</title>
+      <link>https://0vo.moe/posts/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E7%BC%96%E8%AF%91openwrt/</link>
+      <pubDate>Tue, 31 Dec 2019 12:20:35 +0800</pubDate>
+      
+      <guid>https://0vo.moe/posts/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E7%BC%96%E8%AF%91openwrt/</guid>
+      <description>恩山论坛上的k2p的OpenWrt固件都塞得太满了，没有空间装自己的插件，就打算自己编译一个OpenWrt 使用的是Lean大神的源码，地址：</description>
+    </item>
+    
+    <item>
+      <title>为Docker中的Nginx启用Brotli压缩算法</title>
+      <link>https://0vo.moe/posts/%E4%B8%BAdocker%E4%B8%AD%E7%9A%84nginx%E5%90%AF%E7%94%A8brotli%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sat, 21 Dec 2019 17:25:19 +0800</pubDate>
+      
+      <guid>https://0vo.moe/posts/%E4%B8%BAdocker%E4%B8%AD%E7%9A%84nginx%E5%90%AF%E7%94%A8brotli%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/</guid>
+      <description>由于Brotli属于第三方模块，Nginx的官方Docker镜像并没有集成，所以只能自己添加，好在Nginx可以动态加载模块，无需编译整个N</description>
+    </item>
     
     <item>
       <title>编译安装 shadowsocks-libev 记录</title>

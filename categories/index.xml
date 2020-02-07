@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Kong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 12:20:35 +0800</lastBuildDate>
     
 	<atom:link href="https://0vo.moe/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux</title>
+      <link>https://0vo.moe/categories/linux/</link>
+      <pubDate>Tue, 31 Dec 2019 12:20:35 +0800</pubDate>
+      
+      <guid>https://0vo.moe/categories/linux/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Python</title>
@@ -26,15 +35,6 @@
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://0vo.moe/categories/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://0vo.moe/categories/linux/</link>
-      <pubDate>Sat, 18 May 2019 07:13:00 +0000</pubDate>
-      
-      <guid>https://0vo.moe/categories/linux/</guid>
       <description></description>
     </item>
     

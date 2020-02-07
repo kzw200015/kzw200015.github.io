@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
   <head>
     
       <title>我的zsh终端配置 :: Kong&#39;s Blog</title>
@@ -65,17 +65,24 @@
     
       
         
-          <li><a href="/about">About</a></li>
+          <li><a href="/post">归档</a></li>
         
       
         
-          <li><a href="/archive">Archive</a></li>
+          <li><a href="/categories">分类</a></li>
+        
+      
+        
+          <li><a href="/tags">标签云</a></li>
         
       
         
           <li><a href="/index.xml">RSS</a></li>
         
       
+        
+          <li><a href="/about">关于</a></li>
+        
       
     
   </ul>
@@ -83,15 +90,23 @@
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/about">About</a></li>
+        <li><a href="/post">归档</a></li>
       
     
       
-        <li><a href="/archive">Archive</a></li>
+        <li><a href="/categories">分类</a></li>
+      
+    
+      
+        <li><a href="/tags">标签云</a></li>
       
     
       
         <li><a href="/index.xml">RSS</a></li>
+      
+    
+      
+        <li><a href="/about">关于</a></li>
       
     
   </ul>
@@ -145,22 +160,22 @@
 
     <div class="post-content">
       <p><code>zsh</code>是一个非常好用的<code>shell</code>，比<code>bash</code>不知道高到哪儿去了。这是我的一些个人配置</p>
-<h2 id="1zsh">1.安装<code>zsh</code></h2>
+<h2 id="1安装zsh">1.安装<code>zsh</code></h2>
 <p>直接使用包管理器即可</p>
 <pre><code>apt install -y zsh
-</code></pre><h2 id="2oh-my-zsh">2.安装<code>Oh My Zsh</code></h2>
+</code></pre><h2 id="2安装oh-my-zsh">2.安装<code>Oh My Zsh</code></h2>
 <p>这是一个方便配置<code>zsh</code>的<code>shell</code>脚本，执行下面的命令来安装它</p>
 <pre><code>sh -c &quot;$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot;
 </code></pre><p>脚本会安装好<code>Oh My Zsh</code>并将默认的<code>shell</code>切换为<code>zsh</code></p>
-<h2 id="3">3.更换主题</h2>
+<h2 id="3更换主题">3.更换主题</h2>
 <p><code>zsh</code>有着大量的主题可以自定义你的终端，我个人比较喜欢<code>ys</code>
 只需要修改<code>~/.zshrc</code>，将对应的部分改成<code>ZSH_THEME=&quot;ys&quot;</code></p>
-<h2 id="4">4.安装插件</h2>
+<h2 id="4安装插件">4.安装插件</h2>
 <p><code>zsh</code>最强大的地方就在于有着大量的插件可以极大地提高自己的工作效率，这是几个我自己用到的插件</p>
 <h3 id="1zsh-syntax-highlighting">1.zsh-syntax-highlighting</h3>
 <p>这是一个关键词高亮插件，效果如图
 <img src="/img/2018/12/TIM%E5%9B%BE%E7%89%8720181203165049.png" alt="TIM图片20181203165049"></p>
-<h4 id="heading">安装</h4>
+<h4 id="安装">安装</h4>
 <p>执行</p>
 <pre><code>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 </code></pre><p>并编辑<code>~/.zshrc</code>，将对应的部分加上<code>zsh-syntax-highlighting</code>，如</p>
@@ -172,7 +187,7 @@
 <p>自动补全插件，效率神器，它会根据你的输入的历史记录来补全命令，补全的部分会显示为灰色，效果如图
 <img src="/img/2018/12/TIM%E5%9B%BE%E7%89%8720181203171634.png" alt="TIM图片20181203171634">
 按下右方向键即可填充灰色部分</p>
-<h4 id="heading-1">安装</h4>
+<h4 id="安装-1">安装</h4>
 <p>执行</p>
 <pre><code>git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 </code></pre><p>之后就和之前说的一样在<code>~/.zshrc</code>加入<code>zsh-autosuggestions</code>即可启用</p>
@@ -181,14 +196,14 @@
 <img src="/img/2018/12/TIM%E5%9B%BE%E7%89%8720181203172051.png" alt="TIM图片20181203172051">
 甚至只有一部分目录名也行
 不过必须你去过的目录才能跳转</p>
-<h4 id="heading-2">安装</h4>
+<h4 id="安装-2">安装</h4>
 <p>执行</p>
 <pre><code>apt install -y autojump
 </code></pre><p>随后在<code>~/.zshrc</code>中加入</p>
 <pre><code>. /usr/share/autojump/autojump.sh
 </code></pre><p><strong>注：对<code>.zshrc</code>的修改需要重启终端才能生效</strong></p>
 <p>当然还有很多其他实用的插件，如<code>extract</code>插件等等，这里就不多介绍了</p>
-<h2 id="4256">4.启用256色终端</h2>
+<h2 id="4启用256色终端">4.启用256色终端</h2>
 <p>默认<code>zsh</code>只能显示很少的颜色，这就导致了<code>zsh-autosuggestions</code>插件的灰色部分会显示为白色
 在<code>~/.zshrc</code>中加入下面这段来启用256色</p>
 <pre><code>if [ -e /lib/terminfo/x/xterm-256color ]; then
@@ -196,7 +211,7 @@
 else
         export TERM='xterm-color'
 fi
-</code></pre><h2 id="5">5.设置常用的命令别名</h2>
+</code></pre><h2 id="5设置常用的命令别名">5.设置常用的命令别名</h2>
 <pre><code>alias setproxy=&quot;export ALL_PROXY=socks5://127.0.0.1:1080&quot; //设置系统代理
 alias unsetproxy=&quot;unset ALL_PROXY&quot; //关闭系统代理
 alias ip=&quot;curl -i https://ip.cn&quot; //查看当前ip

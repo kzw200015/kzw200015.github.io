@@ -137,14 +137,5 @@
       <description>最近在国内阿里云上git clone让我感受到了国内网络到github的糟糕程度，实在是慢的想砸电脑，于是就想着设置一个代理，shadowso</description>
     </item>
     
-    <item>
-      <title>Archive</title>
-      <link>https://0vo.moe/archive/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://0vo.moe/archive/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

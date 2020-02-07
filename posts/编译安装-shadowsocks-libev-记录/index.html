@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
   <head>
     
       <title>编译安装 shadowsocks-libev 记录 :: Kong&#39;s Blog</title>
@@ -65,17 +65,24 @@
     
       
         
-          <li><a href="/about">About</a></li>
+          <li><a href="/post">归档</a></li>
         
       
         
-          <li><a href="/archive">Archive</a></li>
+          <li><a href="/categories">分类</a></li>
+        
+      
+        
+          <li><a href="/tags">标签云</a></li>
         
       
         
           <li><a href="/index.xml">RSS</a></li>
         
       
+        
+          <li><a href="/about">关于</a></li>
+        
       
     
   </ul>
@@ -83,15 +90,23 @@
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/about">About</a></li>
+        <li><a href="/post">归档</a></li>
       
     
       
-        <li><a href="/archive">Archive</a></li>
+        <li><a href="/categories">分类</a></li>
+      
+    
+      
+        <li><a href="/tags">标签云</a></li>
       
     
       
         <li><a href="/index.xml">RSS</a></li>
+      
+    
+      
+        <li><a href="/about">关于</a></li>
       
     
   </ul>
@@ -146,7 +161,7 @@
     <div class="post-content">
       <p>由于秋水逸冰大佬已经金盆洗手，不干了，所以也就没有脚本可以用了，所以打算自己编译安装一个，在这儿做个记录，以备以后查阅</p>
 <p>项目地址：<a href="https://github.com/shadowsocks/shadowsocks-libev">https://github.com/shadowsocks/shadowsocks-libev</a></p>
-<h2 id="heading">准备工作</h2>
+<h2 id="准备工作">准备工作</h2>
 <p>依赖</p>
 <ul>
 <li>autoconf</li>
@@ -164,17 +179,17 @@
 </ul>
 <p>Ubuntu可直接使用以下命令安装依赖</p>
 <pre><code>apt install -y gettext build-essential autoconf libtool libpcre3-dev asciidoc xmlto libev-dev libc-ares-dev automake libmbedtls-dev libsodium-dev
-</code></pre><h2 id="heading-1">编译安装</h2>
-<h3 id="heading-2">下载源码</h3>
+</code></pre><h2 id="编译安装">编译安装</h2>
+<h3 id="下载源码">下载源码</h3>
 <pre><code>git clone https://github.com/shadowsocks/shadowsocks-libev.git
 cd shadowsocks-libev
 git submodule update --init --recursive //下载子模块
-</code></pre><h3 id="heading-3">编译</h3>
+</code></pre><h3 id="编译">编译</h3>
 <pre><code>./autogen.sh
 ./configure
 make &amp;&amp; make install
-</code></pre><h2 id="heading-4">配置</h2>
-<h3 id="shadowsocks">shadowsocks配置</h3>
+</code></pre><h2 id="配置">配置</h2>
+<h3 id="shadowsocks配置">shadowsocks配置</h3>
 <pre><code>{
 	&quot;server&quot;:&quot;0.0.0.0&quot;,
 	&quot;mode&quot;:&quot;tcp_and_udp&quot;,
@@ -184,7 +199,7 @@ make &amp;&amp; make install
 	&quot;fast_open&quot;:true, //TFO
 	&quot;timeout&quot;:60 //超时时间
 }
-</code></pre><h3 id="systemd">systemd配置</h3>
+</code></pre><h3 id="systemd配置">systemd配置</h3>
 <pre><code>[Unit]
 Description=ss-libev
 After=network.target
