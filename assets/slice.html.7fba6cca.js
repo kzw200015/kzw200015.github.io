@@ -1,0 +1,1 @@
+const e={key:"v-4d2c0380",path:"/slice.html",title:"\u6765\u770B\u770B\u53EF\u7231\u7684\u732B\u96F7\u5427",lang:"en-US",frontmatter:{},excerpt:"",headers:[],filePathRelative:"slice.md"};export{e as data};

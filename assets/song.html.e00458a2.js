@@ -1,0 +1,1 @@
+const e={key:"v-113e860b",path:"/song.html",title:"",lang:"en-US",frontmatter:{sidebar:"auto"},excerpt:"",headers:[{level:2,title:"\u539F\u521B\u66F2",slug:"\u539F\u521B\u66F2",children:[]},{level:2,title:"3D Live",slug:"_3d-live",children:[]},{level:2,title:"\u7FFB\u5531",slug:"\u7FFB\u5531",children:[]}],filePathRelative:"song.md"};export{e as data};
